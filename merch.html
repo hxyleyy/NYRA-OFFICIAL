@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NEMESIS</title>
+<meta charset="UTF-8">
+<meta name="description" content="NYRA's debut album">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="header">
+            <header>
+                <div class="header-logo">
+                    <a href="index.html"><img src="img/NEMESIS.png" alt="logo"></a>
+                </div>
+            </header>
+            
+            <div class="nav">
+                <nav>
+                    <ol>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="album.html">ALBUM</a></li>
+                        <li><a href="merch.html">MERCH</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>   
+
+        <main>
+            <section>
+                <section class="merch">
+                    <h1>Shop Now!</h1>
+                    <h2>Pre-order by December 10th to get a secret gift!</h2>
+                    
+                    <div class="product-grid">
+                        <div class="clothing">
+                            <h2>CLOTHING</h2>
+                            <div class="bluehoodie">
+                                <img src="img/hoodie1.png" alt="bluehoodie">
+                                <p>BLUE HEART HOODIE<br> $59.99</p>
+                                <button type="submit" class="button-confirm">ADD TO CART</button>
+                            </div>
+                    
+                            <div class="blackhoodie">
+                                <img src="img/hoodie2.png" alt="blackhoodie">
+                                <p>BLACK HEART HOODIE<br> $59.99</p>
+                                <button type="submit" class="button-confirm">ADD TO CART</button>
+                            </div>
+                    
+                            <div class="tshirt">
+                                <img src="img/tshirt.png" alt="tshirt">
+                                <p>NEMESIS TSHIRT<br> $39.99</p>
+                                <button type="submit" class="button-confirm">ADD TO CART</button>
+                            </div>
+                        </div>
+                    
+                        <div class="accessories">
+                            <h2>ACCESSORIES</h2>
+                            <div class="hat">
+                                <img src="img/hat.png" alt="hat">
+                                <p>HEART CAP<br> $19.99</p>
+                                <button type="submit" class="button-confirm">ADD TO CART</button>
+                            </div>
+                    
+                            <div class="phonecase">
+                                <img src="img/phonecase.png" alt="phonecase">
+                                <p>BOW PHONE CASE<br> $29.99</p>
+                                <button type="submit" class="button-confirm">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </section>
+                
+                <section>
+                    <h1>Order Online</h1>
+                    <h2>Free shipping across Canada and US for orders over $50.</h2>
+                </section>
+        
+                <div class="form">
+                    <form action="handler.php" method="post">
+        
+                        <fieldset>
+                            <legend>Payment Details</legend>
+        
+                            <Label for="ccno">Credit Card Number</Label>
+                            <input type="text" id="ccno" name="credit_card_number">
+        
+                            <br>
+        
+                            <label for="cvvno">CVV Number</label>
+                            <input type="text" id="cvvno" name="cvv_number">
+                        </fieldset>
+                    
+                        <fieldset>
+                            <legend>Select your product for purchase</legend>
+        
+                            <label for="buyitem">Which item would you like to purchase?</label>
+                            <select name="purchase_item" id="buyitem">
+                                <option value="bluehoodie">Blue Hoodie</option>
+                                <option value="blackhoodie">Black Hoodie</option>
+                                <option value="tshirt">Tshirt</option>
+                                <option value="phonecase">Phone Case</option>
+                                <option value="hat">Hat</option>
+                            </select>
+                        </fieldset>
+        
+                        <button type="submit" class="button-confirm">
+                            CHECK OUT
+                        </button>
+                    </form>
+                </div>
+        
+            </main>
+
+        <footer>
+            <div class="NYRA">
+                <a href="index.html"><img src="img/NYRA.png" alt="logo"></a>
+            </div>
+        
+            <div class="socialmedia">
+                <h2>FIND US HERE!</h2>
+                <div class="icons">
+                    <a href="#insta"><img src="img/insta.png" alt="insta"></a>
+                    <a href="#tiktok"><img src="img/tiktok.png" alt="tiktok"></a>
+                    <a href="#spotify"><img src="img/spotify.png" alt="spotify"></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

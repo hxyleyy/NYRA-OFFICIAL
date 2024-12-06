@@ -1,0 +1,377 @@
+/* CSS Document */
+
+/* Universal Default Element Style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    font-family: Inter, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.3;
+    background-image: url(../img/background.png);
+    background-attachment: fixed;
+    background-size: 20%;
+    scroll-behavior: smooth;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+h1{
+    color: #cfcfcf;
+    font-size: 22pt;
+    line-height: 1.2;
+}
+
+h2{
+    color: #cfcfcf;
+    font-weight: bolder;
+    font-size: 16pt;
+}
+
+p{
+    color: #cfcfcf;
+    font-size: 14pt;
+    
+}
+
+button{
+    background: linear-gradient(45 deg, #000, #222);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Structure */
+
+/* Header */
+
+.header-logo img{
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.header h1{
+    font-size: 9em;
+    text-align: center;
+    padding-top: 30vh;
+    color: #fff;
+    text-shadow: 0px 0px 10px #ff1486;
+    transition: .3s all ease;
+}
+
+.header h1:hover {
+    text-shadow: 10px 10px 20px #2a13ff;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navigation bar */
+
+.nav {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 9001;
+    display: flex; /* Flexbox to enable centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0 auto; /* Remove any offset margins */
+}
+
+.nav ol {
+    display: flex; /* Ensure the list items are in a row */
+    gap: 15px; /* Add spacing between items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.nav ol li {
+    margin: 0; /* Reset margin for consistent alignment */
+}
+
+.nav ol li a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #292def;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav ol li a:hover {
+    color: #ff1486;
+}
+
+/* Main Content */
+
+.main {
+    height: 90vh;
+    background-image: url(../img/header.png);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+main img{
+    width: 400px;
+    height: auto;
+}
+
+.main h1 {
+    font-size: 4.5em;
+}
+
+.stream-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main p{
+    padding-top: 50px;
+}
+
+.stream-button button {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #0021da;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px #040e4d;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stream-button button:hover {
+    background-color: #0021da;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #040e4d;
+}
+
+.stream-button button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #040e4d;
+}
+
+/* Album */
+
+.album {
+    margin-top: 30px;
+}
+
+.header-bar {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 30px;
+}
+
+.header-bar h1,
+.header-bar h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.header-bar h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #888;
+}
+
+.album-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tracklist {
+    flex: 1;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    color: #cfcfcf;
+    margin-left: 20px;
+}
+
+.tracklist ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.tracklist ol li {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tracklist ol li:hover {
+    transform: scale(1.05); /* Slightly enlarge the item */
+    color: #ff1486; /* Change text color on hover */
+}
+
+.stream-and-listen h1, .stream-and-listen h2{
+    color: #cfcfcf;
+}
+
+/* Vinyl image hover effect */
+.vinyl img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sync hover effect on vinyl with tracklist hover */
+.tracklist ol li:hover ~ .vinyl img, /* When hovering a tracklist item */
+.tracklist ol li:hover .vinyl img {  /* Alternatively when hovering anywhere on the list item */
+    transform: scale(1.1); /* Slightly enlarge the vinyl image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for effect */
+}
+
+.vinyl {
+    flex: 1;
+    text-align: left;
+}
+
+.vinyl img {
+    width: 600px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vinyl img:hover {
+    transform: scale(1.1); /* Grows the image slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+}
+
+/* Merch */
+
+.product {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.product-grid {
+    display: grid;
+    gap: 20px; /* Space between items */
+    grid-template-columns: 1fr; /* Default single column */
+}
+
+.clothing, .accessories {
+    display: grid;
+    gap: 20px; /* Space between items within each section */
+}
+
+.clothing {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for clothing items */
+}
+
+.accessories {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for accessories items */
+}
+
+.product-grid h2 {
+    text-align:left;
+    grid-column: span 3; /* Ensure the title spans across all columns */
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.product {
+    text-align: center; /* Center items */
+    width: 100%;
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Limit image size */
+    margin-bottom: 10px; /* Space between image and button */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.product img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.button-confirm {
+    display: inline-block; /* Button behaves like a block element */
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Inter, monospace;
+    cursor: pointer;
+    text-align: center;
+    color: #4a4e58;
+    background-color: #F2F4FF;
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 4px #666;
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+.button-confirm:active {
+    background-color: #F2F4FF;
+    box-shadow: 0 4px #666;
+    transform: translate(4px, 4px);
+}
+
+.form {
+    font-family: Inter, monospace;
+    color: #cfcfcf;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.NYRA img {
+    width: 250px;
+    height: auto;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    text-align: center;
+}
+
+.socialmedia h2 {
+    color: #cfcfcf;
+    margin-bottom: 10px; 
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.socialmedia img {
+    width: 40px;
+    height: auto;
+    margin-left: 20px; 
+}
+
+.socialmedia a {
+    display: block; 
+}
